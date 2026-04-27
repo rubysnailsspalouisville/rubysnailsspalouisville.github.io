@@ -1851,7 +1851,7 @@ h1, h2, h3, h4, h5, h6 {
 
     /* --- Services Grid --- */
     .services-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         grid-template-rows: auto;
     }
 
@@ -1864,7 +1864,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .service-photo-card {
-        height: 180px;
+        height: 220px;
     }
 
     /* --- Feature / About Section --- */
