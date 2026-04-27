@@ -1993,6 +1993,49 @@ h1, h2, h3, h4, h5, h6 {
         height: 48px;
     }
 
+    /* --- About Us Page --- */
+    .about-split {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .about-image::before {
+        display: none; /* Hide decorative border on mobile to save space */
+    }
+
+    .about-heading {
+        font-size: 32px;
+    }
+
+    .about-stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* --- Services Page --- */
+    .menu-grid {
+        grid-template-columns: 1fr !important; /* Force single column on mobile */
+        gap: 30px;
+    }
+
+    .menu-section-title {
+        font-size: 28px;
+    }
+
+    .services-page-header h1 {
+        font-size: 36px !important;
+    }
+
+    /* --- Gallery Page --- */
+    .masonry-grid {
+        column-count: 2 !important; /* 2 columns for better visibility on small screens */
+        column-gap: 15px;
+    }
+
+    .masonry-item {
+        margin-bottom: 15px;
+    }
+
     /* --- General padding reset --- */
     section {
         padding-left: 16px;
