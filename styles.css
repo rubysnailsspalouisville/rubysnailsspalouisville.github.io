@@ -1855,16 +1855,28 @@ h1, h2, h3, h4, h5, h6 {
         grid-template-rows: auto;
     }
 
+    .service-card {
+        min-height: 200px;
+    }
+
     .service-text-card {
         padding: 30px 20px;
+        min-height: 180px;
     }
 
     .service-name {
-        font-size: 22px;
+        font-size: 26px;
     }
 
     .service-photo-card {
         height: 220px;
+        min-height: 220px;
+    }
+    
+    .service-photo-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
     }
 
     /* --- Feature / About Section --- */
