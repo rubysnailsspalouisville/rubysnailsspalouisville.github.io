@@ -1963,10 +1963,14 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     /* --- Feature / About Section --- */
+    .feature-section {
+        padding: 40px 20px 50px;
+    }
+
     .feature-container {
         flex-direction: column;
         gap: 40px;
-        padding: 60px 20px;
+        padding: 0;
     }
 
     .feature-heading {
