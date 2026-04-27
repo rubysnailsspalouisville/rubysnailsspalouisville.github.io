@@ -247,6 +247,55 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
 }
 
+/* =========================================
+   Floating Side Book Button (mobile only)
+   ========================================= */
+.mobile-book-btn {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 998;
+    background: var(--primary-gold);
+    color: var(--primary-black);
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 11px;
+    border-radius: 8px 0 0 8px;
+    box-shadow: -4px 0 20px rgba(197, 160, 89, 0.5);
+    text-decoration: none;
+    transition: padding 0.25s ease, box-shadow 0.25s ease;
+}
+
+.mobile-book-btn:active {
+    padding-right: 5px;
+    box-shadow: -2px 0 10px rgba(197, 160, 89, 0.4);
+}
+
+.mobile-book-btn svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.mobile-book-btn span {
+    font-family: var(--font-body);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+}
+
+/* Closed day styling */
+.hours-closed {
+    color: #c0392b;
+    font-weight: 600;
+}
+
 /* Mobile Menu Toggle */
 .mobile-menu-toggle {
     display: none;
@@ -1797,6 +1846,10 @@ h1, h2, h3, h4, h5, h6 {
     .nav-mobile-cta {
         display: block;
     }
+
+    .mobile-book-btn {
+        display: flex;
+    }
 }
 
 @media (max-width: 576px) {
@@ -2076,14 +2129,37 @@ h1, h2, h3, h4, h5, h6 {
         gap: 20px;
     }
 
-    /* --- Services Page --- */
+    /* --- Services / Menu Page --- */
+    .menu-wrapper {
+        padding: 30px 16px;
+    }
+
+    .menu-section {
+        margin-bottom: 50px;
+    }
+
     .menu-grid {
-        grid-template-columns: 1fr !important; /* Force single column on mobile */
-        gap: 30px;
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .menu-name {
+        white-space: normal;
+        flex: 1;
+    }
+
+    .menu-dots {
+        min-width: 15px;
     }
 
     .menu-section-title {
-        font-size: 28px;
+        font-size: 24px;
+        letter-spacing: 2px;
+    }
+
+    .menu-desc,
+    .menu-list li {
+        font-size: 14px;
     }
 
     .services-page-header {
