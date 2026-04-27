@@ -1805,3 +1805,186 @@ h1, h2, h3, h4, h5, h6 {
         letter-spacing: 2px;
     }
 }
+
+/* =========================================
+   Mobile Optimization (max-width: 768px)
+   ========================================= */
+@media (max-width: 768px) {
+
+    /* --- Hero Section --- */
+    .hero-section {
+        min-height: 85vh;
+        padding: 0 20px;
+    }
+
+    .hero-content {
+        padding-top: 120px;
+        padding-bottom: 60px;
+    }
+
+    .hero-badge {
+        font-size: 10px;
+        letter-spacing: 3px;
+        padding: 6px 14px;
+    }
+
+    .hero-title {
+        font-size: 38px;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+        max-width: 100%;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* --- Services Grid --- */
+    .services-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .service-text-card {
+        padding: 30px 20px;
+    }
+
+    .service-name {
+        font-size: 22px;
+    }
+
+    .service-photo-card {
+        height: 180px;
+    }
+
+    /* --- Feature / About Section --- */
+    .feature-container {
+        flex-direction: column;
+        gap: 40px;
+        padding: 60px 20px;
+    }
+
+    .feature-heading {
+        font-size: 32px;
+    }
+
+    .feature-text {
+        font-size: 14px;
+    }
+
+    .collage-wrapper {
+        height: 320px;
+    }
+
+    /* --- Gallery Section --- */
+    .gallery-section {
+        padding: 60px 20px;
+    }
+
+    .gallery-title {
+        font-size: 32px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    /* --- CTA Section --- */
+    .cta-section {
+        padding: 60px 20px;
+    }
+
+    .cta-heading {
+        font-size: 28px;
+    }
+
+    .cta-btn {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* --- Testimonials --- */
+    .testimonials-section {
+        padding: 60px 20px;
+    }
+
+    .testimonials-title {
+        font-size: 32px;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* --- Footer --- */
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-map-container {
+        height: 250px;
+        width: 100%;
+    }
+
+    .footer-info-container {
+        padding: 40px 20px;
+    }
+
+    .footer-title {
+        font-size: 28px;
+    }
+
+    .footer-contact-cards {
+        gap: 16px;
+    }
+
+    /* --- Services Section Header --- */
+    .services-header {
+        padding: 40px 20px 20px;
+    }
+
+    .services-title {
+        font-size: 32px;
+    }
+
+    /* --- Section labels & titles --- */
+    h2 {
+        word-break: break-word;
+    }
+
+    /* --- Top Bar --- */
+    .top-bar {
+        padding: 8px 0;
+    }
+
+    .top-bar-inner {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 16px;
+    }
+
+    /* --- Logo --- */
+    .logo-image {
+        height: 48px;
+    }
+
+    /* --- General padding reset --- */
+    section {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
