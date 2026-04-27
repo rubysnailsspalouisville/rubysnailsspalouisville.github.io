@@ -1895,12 +1895,14 @@ h1, h2, h3, h4, h5, h6 {
     /* --- Hero Section --- */
     .hero-section {
         min-height: 85vh;
-        padding: 0 20px;
+        padding: 0 40px;
     }
 
     .hero-content {
         padding-top: 120px;
         padding-bottom: 60px;
+        max-width: 360px;
+        margin: 0 auto;
     }
 
     .hero-badge {
