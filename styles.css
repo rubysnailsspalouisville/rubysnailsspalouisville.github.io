@@ -242,6 +242,11 @@ h1, h2, h3, h4, h5, h6 {
     gap: 20px;
 }
 
+/* Mobile nav CTA — hidden on desktop, shown inside slide-out menu */
+.nav-mobile-cta {
+    display: none;
+}
+
 /* Mobile Menu Toggle */
 .mobile-menu-toggle {
     display: none;
@@ -1746,10 +1751,11 @@ h1, h2, h3, h4, h5, h6 {
         justify-content: center;
     }
     
-    .collage-wrapper {
+    .slider-wrapper {
         height: 500px;
+        max-width: 100%;
     }
-    
+
     .feature-heading {
         font-size: 42px;
     }
@@ -1785,24 +1791,46 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .header-actions .btn {
-        display: none; /* Hide button on mobile to save space, or style it for mobile nav */
+        display: none;
+    }
+
+    .nav-mobile-cta {
+        display: block;
     }
 }
 
 @media (max-width: 576px) {
     .top-bar-inner {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 12px;
     }
-    
+
+    .top-cta {
+        display: none;
+    }
+
     .logo-area h1 {
         font-size: 22px;
     }
-    
+
     .logo-area .tagline {
         font-size: 9px;
         letter-spacing: 2px;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .gallery-item {
+        height: 160px;
     }
 }
 
@@ -1892,10 +1920,39 @@ h1, h2, h3, h4, h5, h6 {
 
     .feature-text {
         font-size: 14px;
+        max-width: 100%;
     }
 
-    .collage-wrapper {
+    .slider-wrapper {
         height: 320px;
+        max-width: 100%;
+    }
+
+    /* --- Story Section --- */
+    .story-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .story-image-wrapper {
+        width: 100%;
+    }
+
+    .story-image-frame::before {
+        display: none;
+    }
+
+    .story-image {
+        height: auto;
+        max-height: 300px;
+    }
+
+    .story-text {
+        max-width: 100%;
+    }
+
+    .story-heading {
+        font-size: 28px;
     }
 
     /* --- Gallery Section --- */
@@ -1983,14 +2040,21 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .top-bar-inner {
+        display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
         padding: 0 16px;
+    }
+
+    .top-cta {
+        display: none;
     }
 
     /* --- Logo --- */
     .logo-image {
         height: 48px;
+        transform: scale(1.2);
     }
 
     /* --- About Us Page --- */
@@ -2022,8 +2086,13 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 28px;
     }
 
+    .services-page-header {
+        padding-top: 110px !important;
+        padding-bottom: 50px !important;
+    }
+
     .services-page-header h1 {
-        font-size: 36px !important;
+        font-size: 32px !important;
     }
 
     /* --- Gallery Page --- */

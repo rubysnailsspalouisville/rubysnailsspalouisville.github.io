@@ -44,6 +44,7 @@
                         <li><a href="/about">About us</a></li>
                         <li><a href="/services">Services</a></li>
                         <li><a href="/gallery">Gallery</a></li>
+                        <li class="nav-mobile-cta"><a href="tel:5023330868" class="btn btn-gold" style="display:inline-flex;align-items:center;gap:8px;margin-top:10px;">📞 Call to Book</a></li>
                     </ul>
                 </nav>
 
@@ -478,6 +479,20 @@
                 }, 3000);
             });
         });
+
+        // Touch swipe support for mobile
+        let touchStartX = 0;
+        track.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        track.addEventListener('touchend', e => {
+            const diff = touchStartX - e.changedTouches[0].screenX;
+            if (Math.abs(diff) > 50) {
+                clearInterval(autoSlide);
+                goToSlide(diff > 0 ? (current + 1) % totalSlides : (current - 1 + totalSlides) % totalSlides);
+                autoSlide = setInterval(() => { goToSlide((current + 1) % totalSlides); }, 3000);
+            }
+        }, { passive: true });
 
         // ---- Lightbox ----
         const lightbox     = document.getElementById('lightbox');
